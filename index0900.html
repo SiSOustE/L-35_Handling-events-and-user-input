@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style0900.css">
+  <script src="script0900.js" defer></script>
+  <title>0900 Сбор данных с формы — класс FormData</title>
+</head>
+<body>
+
+  <form id="regForm" action="/registration" method="post">
+    
+    <p class="field">
+      <label class="field__label" for="login">Логин</label>
+      <input
+        class="field__control"
+        id="login"
+        name="login"
+      />
+    </p>
+
+    <p class="field">
+      <label class="field__label" for="about">О себе</label>
+      <textarea class="field__control" id="about" name="about"></textarea>
+    </p>
+    
+    <fieldset class="radios">
+      <legend class="radios__legend">Ваш пол</legend>
+
+      <input
+      class="radios__control"
+      id="male"
+      name="gender"
+      type="radio"
+      value="Мужской"
+      />
+      <label class="radios__label" for="male">Мужской</label>
+      
+      <input
+        class="radios__control"
+        id="female"
+        name="gender"
+        type="radio"
+        value="Женский"
+        />
+        <label class="radios__label" for="female">Женский</label>
+      </fieldset>
+      
+      <div class="field checkbox">
+        <input
+        class="checkbox__control visually-hidden"
+        id="agreement"
+        name="agreement"
+        type="checkbox"
+        />
+        <span class="checkbox__emulator"></span>
+        <span class="checkbox__label"></span>
+        <label class="field__label checkbox__label" for="agreement">Согласен на всё</label>
+      </div>
+      <button type="submit">Регистрация</button>
+      
+      <!-- Reflection  -->
+      
+    </form>
+    <form action="" id="reflect__wrap">
+      <label class="field__label" for="reflect__data1">Вид 1</label>
+      <textarea class="field__control reflection" id="reflect__data-v1" name="ref"></textarea>
+      <label class="field__label" for="reflect__data1">Вид 2</label>
+      <textarea class="field__control reflection" id="reflect__data-v2" name="ref"></textarea>
+</form>
+  
+</body>
+</html>
